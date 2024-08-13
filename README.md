@@ -15,5 +15,12 @@ This is a simple Note Taking app for Android developed using Jetpack Compose, Ro
 - **Voyager**: For handling navigation.
 - **Hilt**: For dependency injection.
 - **MVVM**: Architecture pattern for separation of concerns.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Demo of the application 🎥
+
+https://github.com/user-attachments/assets/768fbe3f-8646-4e25-8832-9a70f48c178a
+
+
 
 
