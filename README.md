@@ -1,6 +1,6 @@
-# Note Taking App
+# Take Notes App
 
-This is a simple Note Taking app for Android developed using Jetpack Compose, Room database, Voyager, Hilt, and the MVVM architecture pattern. The app allows users to create, update, and delete notes efficiently.
+This is a simple Take Notes app for Android developed using Jetpack Compose, Room database, Voyager, Hilt, and the MVVM architecture pattern. The app allows users to create, update, and delete notes efficiently.
 
 ## Features
 - **CRUD Operations**: Add, update, and delete notes using Room database.
