@@ -15,7 +15,9 @@ This is a simple Take Notes app for Android developed using Jetpack Compose, Roo
 - **Voyager**: For handling navigation.
 - **Hilt**: For dependency injection.
 - **MVVM**: Architecture pattern for separation of concerns.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![Simple Minimalist Creative Studio Logo (2)](https://github.com/user-attachments/assets/70658258-783f-4e1a-899f-635f75391d4d)
 
 # Demo of the application 🎥
 
