@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.hilt.navigation.compose.hiltViewModel
 import cafe.adriel.voyager.navigator.Navigator
+import com.example.noteapp_jetpack_compose.presentation.viewModel.NoteViewModel
+import com.example.noteapp_jetpack_compose.presentation.views.AllNotesScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 

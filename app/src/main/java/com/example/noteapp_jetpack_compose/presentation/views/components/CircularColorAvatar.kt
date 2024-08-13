@@ -1,4 +1,4 @@
-package com.example.noteapp_jetpack_compose.components
+package com.example.noteapp_jetpack_compose.presentation.views.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

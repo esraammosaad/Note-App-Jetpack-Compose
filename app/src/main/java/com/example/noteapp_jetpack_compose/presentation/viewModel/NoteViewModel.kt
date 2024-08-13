@@ -1,9 +1,8 @@
-package com.example.noteapp_jetpack_compose
+package com.example.noteapp_jetpack_compose.presentation.viewModel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.noteapp_jetpack_compose.Note
 import com.example.noteapp_jetpack_compose.data.repository.NoteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,14 +31,14 @@ class NoteViewModel @Inject constructor(private val noteRepository: NoteReposito
             println("All notes: ${_allNotes.value}")
         }
     }
-    fun insertNote(note:Note){
+    fun insertNote(note: Note){
         viewModelScope.launch {
             noteRepository.insert(note)
             getAllNotes()
         }
     }
 
-    fun updateNote(note:Note){
+    fun updateNote(note: Note){
         viewModelScope.launch {
             noteRepository.update(note)
             getAllNotes()
@@ -49,7 +48,7 @@ class NoteViewModel @Inject constructor(private val noteRepository: NoteReposito
 
 
 
-    fun deleteNote(note:Note){
+    fun deleteNote(note: Note){
         viewModelScope.launch {
             noteRepository.deleteNote(note)
             getAllNotes()

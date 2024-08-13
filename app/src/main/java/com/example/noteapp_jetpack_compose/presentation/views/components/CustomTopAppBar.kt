@@ -1,4 +1,4 @@
-package com.example.noteapp_jetpack_compose.components
+package com.example.noteapp_jetpack_compose.presentation.views.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -19,8 +19,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import com.example.noteapp_jetpack_compose.FavoriteScreen
-import com.example.noteapp_jetpack_compose.NoteViewModel
+import com.example.noteapp_jetpack_compose.presentation.views.FavoriteScreen
+import com.example.noteapp_jetpack_compose.presentation.viewModel.NoteViewModel
 import com.example.noteapp_jetpack_compose.R
 
 @Composable

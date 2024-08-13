@@ -1,12 +1,15 @@
-package com.example.noteapp_jetpack_compose
+package com.example.noteapp_jetpack_compose.presentation.views
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -33,8 +36,10 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import com.example.noteapp_jetpack_compose.components.CustomBottomSheet
-import com.example.noteapp_jetpack_compose.components.CustomNoteCard
+import com.example.noteapp_jetpack_compose.Note
+import com.example.noteapp_jetpack_compose.presentation.viewModel.NoteViewModel
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomBottomSheet
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomNoteCard
 
 
 class FavoriteScreen(private val noteViewModel: NoteViewModel) :Screen{
@@ -91,15 +96,25 @@ class FavoriteScreen(private val noteViewModel: NoteViewModel) :Screen{
                     ),
                     title = {
 
-                        Icon(Icons.Default.KeyboardArrowLeft, contentDescription = null, tint = Color.White, modifier = Modifier.size(28.dp).clickable {
+                        Row {
+                            Icon(Icons.Default.KeyboardArrowLeft, contentDescription = null, tint = Color.White, modifier = Modifier
+                                .size(34.dp)
+                                .clickable {
 
-                            navigator.pop()
-                        })
+                                    navigator.pop()
+                                })
+                            Spacer(modifier = Modifier.width(28.dp))
+                            Text("Favorite Notes", color = Color.White, fontSize = 26.sp,)
+
+                        }
+
+
+
+
 
                     },
 
                     actions = {
-                        Text("Favorite Notes", color = Color.White, fontSize = 18.sp,)
 
                     }
 

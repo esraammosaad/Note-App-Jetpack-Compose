@@ -1,4 +1,4 @@
-package com.example.noteapp_jetpack_compose
+package com.example.noteapp_jetpack_compose.presentation.views
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -12,10 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import cafe.adriel.voyager.core.screen.Screen
-import com.example.noteapp_jetpack_compose.components.CustomBottomSheet
-import com.example.noteapp_jetpack_compose.components.CustomFloatingActionButton
-import com.example.noteapp_jetpack_compose.components.CustomNoteCard
-import com.example.noteapp_jetpack_compose.components.CustomTopAppBar
+import com.example.noteapp_jetpack_compose.Note
+import com.example.noteapp_jetpack_compose.presentation.viewModel.NoteViewModel
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomBottomSheet
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomFloatingActionButton
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomNoteCard
+import com.example.noteapp_jetpack_compose.presentation.views.components.CustomTopAppBar
 
 class AllNotesScreen(private val noteViewModel: NoteViewModel) : Screen {
     @RequiresApi(Build.VERSION_CODES.O)
@@ -45,8 +47,6 @@ class AllNotesScreen(private val noteViewModel: NoteViewModel) : Screen {
                 0xFFFFC1E3   // Light Pink (duplicate for emphasis)
             )
         }
-        var showDialog = remember { mutableStateOf(false) }
-
         val note = remember {
             mutableStateOf(Note(color = 0xfffffff, isFavorite = false, title = "", description = "", createdDate = "", createdTime = ""))
         }
@@ -78,7 +78,7 @@ class AllNotesScreen(private val noteViewModel: NoteViewModel) : Screen {
                     .fillMaxSize(),
             ) {
                 items(
-                    items = allNotes?.sortedByDescending { it.createdTime } ?: emptyList(), // Sort notes to have new ones at the top
+                    items = allNotes?.sortedByDescending { it.id } ?: emptyList(), // Sort notes to have new ones at the top
                     key = { it.id } // Assuming Note has a unique 'id' property
                 ) { currentNote ->
                     CustomNoteCard(

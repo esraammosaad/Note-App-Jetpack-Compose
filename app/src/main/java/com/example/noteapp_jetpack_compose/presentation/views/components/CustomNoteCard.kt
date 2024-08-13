@@ -1,9 +1,8 @@
-package com.example.noteapp_jetpack_compose.components
+package com.example.noteapp_jetpack_compose.presentation.views.components
 
 import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.outlined.Delete
@@ -20,7 +19,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.noteapp_jetpack_compose.Note
-import com.example.noteapp_jetpack_compose.NoteViewModel
+import com.example.noteapp_jetpack_compose.presentation.viewModel.NoteViewModel
 
 @Composable
 fun CustomNoteCard(

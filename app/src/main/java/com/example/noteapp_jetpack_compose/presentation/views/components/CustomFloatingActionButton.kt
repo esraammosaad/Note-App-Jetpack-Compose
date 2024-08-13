@@ -1,4 +1,4 @@
-package com.example.noteapp_jetpack_compose.components
+package com.example.noteapp_jetpack_compose.presentation.views.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
